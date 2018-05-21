@@ -14,6 +14,6 @@ git merge master
 
 #### Merging branches using `git rebase`
 ```bash
-
-
+git rebase develop
+# Integrate the coommits of develop to your current branch without doing the merge commit
 ```
