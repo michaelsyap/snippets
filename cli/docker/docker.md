@@ -56,3 +56,46 @@ docker rmi centos
 
 #### Force remove an image
 docker rmi -f centos
+
+
+#### Running a container image with a docker-compose.yml
+docker-compose up -d
+
+
+### Checking the ip address 
+docker inspect container_id or image_id
+
+
+
+## Networking
+
+docker network ls
+
+### Remove docker network
+docker network rm docker_network_id
+
+
+### Stop and uninstall installed configuration of a docker container (within a directory with docker-compose.yml)
+docker down
+
+### Creating a network
+`https://docs.docker.com/engine/reference/commandline/network_create/`
+docker network create \
+  --driver=bridge \
+  --subnet=192.168.0.0/16 \
+  --ip-range=192.168.1.0/24 \
+  --gateway=192.168.1.254 \
+  devnetwork
+
+
+#### SSH into docker container
+docker exec -it 17bbb4179010 bash
+
+#### Fix internet access issue from docker container
+vim /etc/resolv.conf 
+connect to 8.8.8.8 
+
+
+#### Connecting foreign container to a docker network
+docker network connect network_name container_name 
+
