@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  magento_theming_tutorial.local:
+    image: jclaud/apache-php:7.2
+    container_name: magento_theming_tutorial.local-port-7777
+    volumes:
+       - local_absolute_directory:/var/www/web
+    external_links:
+       - mysql5.6-192.168.1.2
+    ports:
+      - "7777:80"
+    tty: true
+    stdin_open: true
