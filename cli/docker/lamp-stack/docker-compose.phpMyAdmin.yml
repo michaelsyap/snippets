@@ -2,11 +2,11 @@ version: "3.2"
 services:
   phpmyadmin5.6:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin-mysql-5.6-localhost7778
+    container_name: phpmyadmin-mysql-5.6-172.28.5.2
     environment:
-      - PMA_HOST=192.168.1.2
+      - PMA_HOST=172.28.5.2
     external_links:
-      - mysql5.6-192.168.1.2:db
+      - mysql5.6-172.28.5.1:db
     ports:
-      - "7778:80"
+      - "3501:80"
     restart: always
