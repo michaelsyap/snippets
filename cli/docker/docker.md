@@ -86,6 +86,12 @@ docker rmi centos
 docker rmi -f centos
 ```
 
+
+#### Building a docker image and running it afterwards with docker-compose
+```bash
+docker-compose up --build
+```
+
 #### Running a container image with a docker-compose.yml
 ```bash
 docker-compose up -d
